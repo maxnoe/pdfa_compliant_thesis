@@ -3,7 +3,6 @@ OUTDIR=build
 all: build/phd_mnoethe.pdf
 
 
-
 $(OUTDIR)/phd_mnoethe.pdf: FORCE
 	latexmk \
 		--lualatex \
