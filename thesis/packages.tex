@@ -1,0 +1,64 @@
+% Fixes for float package to be used with komascript
+\usepackage{scrhack}
+
+% fonts 
+\usepackage{fontspec}
+% workadound for broken microtype in TL2018
+\usepackage{luatexbase}
+\usepackage{microtype}
+
+% language
+\usepackage{polyglossia}
+\usepackage[autostyle]{csquotes}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+
+\usepackage[
+  mathrm=sym,        % use math font for mathrm, not text font
+  math-style=ISO,    
+  bold-style=ISO,   
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+  warnings-off={
+    mathtools-colon,
+    mathtools-overbracket,
+  }, 
+]{unicode-math}
+
+\usepackage[
+  locale=US,
+  separate-uncertainty=true,
+  per-mode=symbol-or-fraction,
+]{siunitx}
+
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{booktabs}
+
+\usepackage{float}
+\usepackage[
+  section, % floats stay in section
+  below, % allow in next section if on same page
+]{placeins}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{todonotes}
+
+\usepackage[a-3u]{pdfx}
+
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[shortcuts]{extdash}
+
+

@@ -1,0 +1,55 @@
+% Metadata for pdf/a compliance
+\begin{filecontents*}{\jobname.xmpdata}
+  \Title{Miscellaneous FACT related stuff}
+  \Author{Maximilian Nöthe}
+  \Language{en-US}
+  \Keywords{PHD thesis\sep Dissertation\sep Gamma-Ray Astronomy\sep FACT}
+  \Publisher{TU Dortmund}
+  \Date{2019}
+\end{filecontents*}
+\documentclass[
+  BCOR=12mm,
+  open=right,
+  cleardoublepage=plain,
+  bibliography=totoc,
+  numbers=noenddot,       % no dot after figure/table number
+  captions=tableheading,  % correct spacing for table headings
+  titlepage=firstiscover, % symmetrical margins on title page
+  headings=normal,        % size of chapter headings slightly smaller
+]{scrbook}
+
+\input{packages.tex}
+\input{fonts.tex}
+\input{settings.tex}
+
+
+\title{Miscellaneous FACT related stuff}
+\author{Maximilian Nöthe}
+\date{2019}
+
+
+\begin{document}
+\listoftodos
+
+\frontmatter
+\input{titlepage.tex}
+
+\tableofcontents
+
+\mainmatter
+
+\input{chapters/introduction.tex}
+
+\todo{Status Quo 2015}
+\todo{Mopro3}
+\todo{Automatische Prozessierung}
+\todo{FACT-Tools Verbesserungen}
+\todo{AICT-Tools}
+\todo{Disp-Regression}
+\todo{shifthelper}
+
+
+\backmatter
+\printbibliography
+
+\end{document}
