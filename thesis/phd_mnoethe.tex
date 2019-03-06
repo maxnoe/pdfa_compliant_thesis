@@ -20,8 +20,9 @@
 ]{scrbook}
 
 \input{packages.tex}
-\input{fonts.tex}
 \input{settings.tex}
+\input{fonts.tex}
+\recalctypearea
 
 
 \title{Miscellaneous FACT related stuff}
@@ -30,14 +31,17 @@
 
 
 \begin{document}
+\pagenumbering{Roman}
 \listoftodos
-
 \frontmatter
 \input{titlepage.tex}
 
 \tableofcontents
 
 \mainmatter
+
+\the\textwidth\\
+\includegraphics{build/plots/sin.pdf}
 
 \input{chapters/introduction.tex}
 
