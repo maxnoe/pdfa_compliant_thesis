@@ -1,7 +1,8 @@
+NAME=thesis
 OUTDIR=build
 MATPLOTLIBRC=plots/matplotlibrc
 
-all: build/phd_mnoethe.pdf build/pdfa_compliance.xml
+all: build/$(NAME).pdf build/pdfa_compliance.xml
 
 
 plots: $(addprefix $(OUTDIR)/plots/, $(addsuffix .pdf, \
@@ -9,16 +10,16 @@ plots: $(addprefix $(OUTDIR)/plots/, $(addsuffix .pdf, \
 	))
 
 
-$(OUTDIR)/phd_mnoethe.pdf: plots FORCE
+$(OUTDIR)/$(NAME).pdf: plots FORCE
 	latexmk \
 		--lualatex \
 		--interaction=nonstopmode \
 		--halt-on-error \
 		--output-directory=$(OUTDIR) \
-		phd_mnoethe.tex
+		$(NAME).tex
 
 
-$(OUTDIR)/pdfa_compliance.xml: $(OUTDIR)/phd_mnoethe.pdf
+$(OUTDIR)/pdfa_compliance.xml: $(OUTDIR)/$(NAME).pdf
 	verapdf --flavour 3u $^ | tee $@ | grep -Poh 'isCompliant="true"'
 
 

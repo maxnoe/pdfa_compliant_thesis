@@ -1,7 +1,7 @@
 % Metadata for pdf/a compliance
 \RequirePackage{filecontents}
 \begin{filecontents*}{\jobname.xmpdata}
-  \Title{Miscellaneous FACT related stuff}
+  \Title{PDF/A compliant thesis}
   \Author{Maximilian Nöthe}
   \Language{en-US}
   \Keywords{PHD thesis\sep Dissertation\sep Gamma-Ray Astronomy\sep FACT}
@@ -25,14 +25,12 @@
 \recalctypearea
 
 
-\title{Miscellaneous FACT related stuff}
+\title{PDF/A compliant thesis}
 \author{Maximilian Nöthe}
 \date{2019}
 
 
 \begin{document}
-\pagenumbering{Roman}
-\listoftodos
 \frontmatter
 \input{titlepage.tex}
 
@@ -40,19 +38,7 @@
 
 \mainmatter
 
-\the\textwidth\\
 \includegraphics{build/plots/sin.pdf}
-
-\input{chapters/introduction.tex}
-
-\todo{Status Quo 2015}
-\todo{Mopro3}
-\todo{Automatische Prozessierung}
-\todo{FACT-Tools Verbesserungen}
-\todo{AICT-Tools}
-\todo{Disp-Regression}
-\todo{shifthelper}
-
 
 \backmatter
 \printbibliography
